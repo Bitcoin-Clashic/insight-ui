@@ -1,0 +1,74 @@
+{
+  "_from": "insight-ui@5.0.0-beta.44",
+  "_id": "insight-ui@5.0.0-beta.44",
+  "_inBundle": false,
+  "_integrity": "sha512-IdEbDegFX++to7ag+Kbvhf/o6IWvPweXd3k9b94DTZzcVdXOsJU1wrzNm+RVk1eO2wJPirBQ+eRkhfp7/NMM8Q==",
+  "_location": "/insight-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "insight-ui@5.0.0-beta.44",
+    "name": "insight-ui",
+    "escapedName": "insight-ui",
+    "rawSpec": "5.0.0-beta.44",
+    "saveSpec": null,
+    "fetchSpec": "5.0.0-beta.44"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/insight-ui/-/insight-ui-5.0.0-beta.44.tgz",
+  "_shasum": "8bcb98faee180c85ed799822c717b59c3de43f2c",
+  "_spec": "insight-ui@5.0.0-beta.44",
+  "_where": "/root/bitcore4/bitcore-node",
+  "bitcoreNode": "bitcore-node",
+  "bugs": {
+    "url": "https://github.com/bitpay/insight-ui/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
+  "devDependencies": {
+    "bower": "~1.8.0",
+    "grunt": "~0.4.2",
+    "grunt-angular-gettext": "^0.2.15",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "*",
+    "grunt-css": "~0.5.4",
+    "grunt-macreload": "*",
+    "grunt-markdown": "~0.5.0",
+    "grunt-replace": "^1.0.1",
+    "mocha": "^2.4.5"
+  },
+  "homepage": "https://github.com/bitpay/insight-ui",
+  "insightConfig": {
+    "apiPrefix": "api",
+    "routePrefix": ""
+  },
+  "keywords": [
+    "insight",
+    "blockchain",
+    "blockexplorer",
+    "bitcoin",
+    "bitcore",
+    "front-end"
+  ],
+  "license": "MIT",
+  "name": "insight-ui",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitpay/insight-ui.git"
+  },
+  "scripts": {
+    "build": "bower install --allow-root && grunt compile && wget https://github.com/bitpay/insight/raw/340decd978250e20289a80a6ccecd5b8f73f29ad/public/js/angularjs-all.min.js -O ./public/js/angularjs-all.min.js",
+    "install-and-build": "npm install && npm run build",
+    "test": "mocha test",
+    "watch": "grunt"
+  },
+  "version": "5.0.0-beta.44"
+}
