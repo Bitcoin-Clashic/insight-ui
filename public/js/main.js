@@ -1,6 +1,6 @@
 // Source: public/src/js/app.js
 var defaultLanguage = localStorage.getItem('insight-language') || 'en';
-var defaultCurrency = localStorage.getItem('insight-currency') || 'TNET';
+var defaultCurrency = localStorage.getItem('insight-currency') || 'BCHC';
 
 angular.module('insight',[
   'ngAnimate',
@@ -271,7 +271,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
         if (this.symbol === 'USD') {
           response = _roundFloat((value * this.factor), 2);
-        } else if (this.symbol === 'mTNET') {
+        } else if (this.symbol === 'mBCHC') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
         } else if (this.symbol === 'bits') {
@@ -298,7 +298,7 @@ angular.module('insight.currency').controller('CurrencyController',
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
-      } else if (currency === 'mTNET') {
+      } else if (currency === 'mBCHC') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;
